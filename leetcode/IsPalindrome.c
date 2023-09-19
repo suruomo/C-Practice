@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool isPalindrome(int x);
+bool IsPalindrome(int x);
 
 int main()
 {
     int x = 121;
-    printf("%d", isPalindrome(x));
+    printf("%d", IsPalindrome(x));
     return 0;
 }
 /*
 * 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
 */
-bool isPalindrome(int x) {
+bool IsPalindrome(int x) {
     if (x < 0)
         return false;
     else

@@ -7,8 +7,8 @@ struct TreeNode {
 };
 
 void inOrder(struct TreeNode* root);
-int i = 0;
-int a[];
+int static i = 0;
+int static b[100];
 /**
  * 给定一个二叉树的根节点root，返回它的中序遍历结果。 -------递归
  *
@@ -19,7 +19,7 @@ int a[];
 int* inorderTraversal(struct TreeNode* root, int* returnSize) {
     inOrder(root);
     *returnSize = i;
-    return a;
+    return b;
 }
 
 void inOrder(struct TreeNode* root) {
@@ -27,7 +27,7 @@ void inOrder(struct TreeNode* root) {
         return;
     }
     inOrder(root->left);
-    a[i++] = root->val;
+    b[i++] = root->val;
     inOrder(root->right);
 }
 

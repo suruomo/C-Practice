@@ -7,8 +7,8 @@
   };
 
  void pre(struct TreeNode* root);
- int i = 0;
- int a[];
+ int static i = 0;
+ int static a[100];
  /**
   * 给你二叉树的根节点 root ，返回它节点值的 前序 遍历。  ----递归
   *
@@ -57,7 +57,7 @@ int* preorderTraversal1(struct TreeNode* root, int* returnSize) {
     while (top != 0 ) {
         while (root != NULL) {
             struct TreeNode* node = stack[top--];
-            res[*returnSize++] = root->val;
+            res[*returnSize++] = node->val;
             if (node->left != NULL) {
                 stack[top++] = node->left;
             }
